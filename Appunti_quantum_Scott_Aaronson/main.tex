@@ -53,7 +53,7 @@ Esiste l'opinione secondo cui, se sapessimo tutto sull'universo, come ad esempio
     \\Questo famoso esperimento consiste nello "\textit{Sparare}" fotoni attraverso una fenditura, e successivamente attraverso due, per dimostrare la doppia natura della luce, sia come onda che come particella.
     \begin{figure}[h]
         \centering
-        \includegraphics[width=1\linewidth]{Fenditure.png}
+        \includegraphics[width=1\linewidth]{images/Fenditure.png}
         \label{fig:fenditure}
     \end{figure}
     Alcune aree sullo schermo d'arrivo saranno più probabili, mentre altre lo saranno di meno. Potremmo spiegare ciò teorizzando che ogni fotone abbia ulteriori gradi di libertà che non conosciamo. Ma la cosa veramente strana è la seguente. Per alcuni intervalli sul seondo muro:
@@ -69,7 +69,7 @@ Esiste l'opinione secondo cui, se sapessimo tutto sull'universo, come ad esempio
     \\
     \begin{figure}[ht]
         \centering
-        \includegraphics[width=0.5\linewidth]{energiaatomo.png}
+        \includegraphics[width=0.5\linewidth]{images/energiaatomo.png}
         \label{fig:placeholder}
     \end{figure}
     La storia della fisica tra il 1900 e il 1926 consiste in una serie di scoperte che non corrispondono con le normali leggi della meccanica e della probabilità, a cui i fisici davano soluzioni complicate e disconnesse tra loro.
@@ -287,7 +287,7 @@ Esiste l'opinione secondo cui, se sapessimo tutto sull'universo, come ad esempio
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=1\linewidth]{Circonferenza.png}
+        \includegraphics[width=1\linewidth]{images/Circonferenza.png}
         \label{fig:placeholder}
     \end{figure}
     La coppia $\{\ket{+},\ket{-}\}$ è detta \textit{Base di Hadamard}. La figura mostra gli stati della base di Hadamard sul piano reale.
@@ -338,7 +338,7 @@ Esiste l'opinione secondo cui, se sapessimo tutto sull'universo, come ad esempio
     \\Nel mondo quantistico a volte possiamo però applicare una trasformazione unitaria ad uno stato in sovrapposizione ottenendo un risultato deterministico, anche se la risposta sarebbe stata casuale applicandola ad una singola componente dello stato. Molti di questi fenomeni possono essere spiegati in termini di \textbf{Interferenza quantistica}. Supponiamo per esempio di partire dallo stato $\ket{0}$. Applichiamo due volte la trasformazione unitaria che mappa $\ket{0}\rightarrow\ket{+}$ e $\ket{1}\rightarrow \ket{-}$. 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.5\linewidth]{Path.png}
+        \includegraphics[width=0.5\linewidth]{images/Path.png}
         \label{fig:placeholder}
     \end{figure}
     Per ottenere l'ampiezza di probabilità associata ai possibili risultati facciamo il prodotto delle ampiezze nel percorso associato. Una volta ottenuta l'ampiezza per un particolare output facciamo la somma delle ampiezze ottenute per esso. In questo modo otteniamo che l'ampiezza per $\ket{0}$ è $1$ mentre per $\ket{1}$ è $0$. In pratica abbiamo un'interferenza costruttiva su $\ket{0}$ e un'interferenza distruttiva su $\ket{1}$
@@ -416,13 +416,13 @@ Esiste l'opinione secondo cui, se sapessimo tutto sull'universo, come ad esempio
     Le operazioni su un qubit sono collegate su una linea in ordine di applicazione da sinistra verso destra. La prossima immagine ad esempio rappresenta l'applicazione di due Hadamard Gate e una misurazione finale ad un Qubit  nello stato $\ket{1}$
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.8\linewidth]{Circuito1.png}
+        \includegraphics[width=0.8\linewidth]{images/Circuito1.png}
         \label{fig:placeholder}
     \end{figure}
     Questo esempio è molto semplice, ma per trasformazioni più complesse su più qubit diventerebbe difficile tracciare le operazioni. Nel prossimo circuito vediamo ad esempio un gate, $U$, che agisce su due qubit, un Hadamard sul primo qubit e una misurazione finale.
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.8\linewidth]{Circuito2.png}
+        \includegraphics[width=0.8\linewidth]{images/Circuito2.png}
         \label{fig:placeholder}
     \end{figure}
     In alcuni casi inoltre è utile avere dei qubit extra per i risultati intermedi (tipicamente nello stato iniziale $\ket{0}$) chiamati \textbf{Ancilla Qubit}.
@@ -431,20 +431,20 @@ Esiste l'opinione secondo cui, se sapessimo tutto sull'universo, come ad esempio
     \\ Nel seguente circuito sono presenti 3 gate controllati: un Cnot, un generico operatore $U$ controllate e un secondo CNOT.
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.7\linewidth]{Circuito 3.png}
+        \includegraphics[width=0.7\linewidth]{images/Circuito 3.png}
         \label{fig:placeholder}
     \end{figure}
     Il controllo applica l'operazione al target se il qubit controllore si trova nello stato $\ket{1}$. Infine il controllo può andare vero entrambe le direzioni, sia verso l'alto che verso il basso.
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=1\linewidth]{gtable1.png}
+        \includegraphics[width=1\linewidth]{images/gtable1.png}
         \label{fig:placeholder}
     \end{figure}
     \begin{figure}[H]
         \centering
-        \includegraphics[width=1\linewidth]{gtable2.png}
-        \label{fig:placeholder}
+        \includegraphics[width=1\linewidth]{images/gtable2.png}
+        \label{fig:TabGate}
         \caption{Tabella dei Gate notevoli}
     \end{figure}
 
@@ -492,9 +492,131 @@ Esiste l'opinione secondo cui, se sapessimo tutto sull'universo, come ad esempio
 
 
     \section{Il problema della moneta, Distinguibilità, Stati a molti Qubit ed Entanglement}
+    \subsection{Il problema della moneta}
+    Supponiamo di avere una moneta e voler verificare se è fair ($p = \frac{1}{2}$) o invece è truccata ($p = \frac{1}{2}+ \varepsilon$). 
+    \\
+    Classicamente dovremmo lanciare la moneta $\frac{1}{\varepsilon^2}$ volte tenendo traccia del numero di teste e croci. Ciò richiede circa $\log\left(\frac{1}{\varepsilon^2}\right)$ bit di memoria. Esiste infatti un teorema degli anni settanta che afferma la necessità di tale quantità di memoria per questo problema. 
     
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\linewidth]{images/coinflip.png}
+        \caption{Distribuzione di probabilità dei lanci di moneta. Visto che la deviazione standard è $\frac{1}{\sqrt{n}}$, con $n$ numero di lanci, per distinguere le due distribuzioni, che differiscono per un $\varepsilon$, abbiamo bisogno di $\frac{1}{\sqrt{n}} \sim \varepsilon \implies n \sim \frac{1}{\varepsilon^2}$ lanci di moneta.} 
+        \label{fig:placeholder}
+    \end{figure}
+    E se provassimo ad utilizzare uno stato quantistico? Iniziamo dallo stato $\ket{0}$ e consideriamo due rotazioni $R_\varepsilon$ e $R_{-\varepsilon}$ che effettuano rispettivamente una rotazione di $\varepsilon$ e $-\varepsilon$ radianti. Possiamo lanciare ripetutamente la moneta e ogni volta che otteniamo croce applichiamo $R_\varepsilon$ (rotazione oraria) e se otteniamo testa applichiamo $R_{-\varepsilon}$ (rotazione antioraria).
+    \\
+    Dopo circa $\frac{1}{\varepsilon^2}$ lanci, se abbiamo ottenuto $\ket{0}$ la moneta è molto probabilmente fair, mentre se otteniamo $\ket{1}$ probabilmente era truccata. Potremmo pensare alle possibili obiezioni:
+    \begin{itemize}
+        \item La procedura quantistica non richiede una grande quantità di memoria per contare il numero giusto di passi?
+        \begin{itemize}
+            \item No. Creiamo un protocollo con metà vita (una probabilità indipendente di fermarsi ad ogni step) ripetendolo approssimativamente il numero di volte desiderato.
+        \end{itemize}
+        \item Se la rotazione fosse di un multiplo di $\pi$ non rischieremmo di ottenere il risultato sbagliato?
+        \begin{itemize}
+            \item È possibile, ma possiamo comunque modificarlo in modo che la moneta truccata causi comunque lo stato $\ket{1}$.
+        \end{itemize}
+    \end{itemize}
+    Questo è il nostro primo esempio di algoritmo quantistico con un vantaggio esponenziale: 1 qubit vs $\log\left(\frac{1}{\varepsilon^2}\right)$ bit.
 
-        
+    \subsection{Distinguibilità tra Stati Quantistici}
+    Dati due stati ortogonali $\ket{v}$ e $\ket{w}$, c'è una base in cui misurando riusciamo a distinguerle con certezza. Dati invece due vettori colineari ($\ket{v}$ e $-\ket{v}$) essi risultano indistinguibili.
+    \\Capiamo quindi che il prodotto interno $|\braket{v|w}|$ è una buona misura della distinguibilità tra stati puri. Analizziamo il caso in figura. Quale misurazione minimizza la probabilità di commettere un errore nella distinzione tra $\ket{v}$ e $\ket{w}$ supponendoli equiprobabili?
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\linewidth]{images/novector.png}
+        \label{fig:placeholder}
+    \end{figure}
+    Potremmo pensare di utilizzare la base $\{\ket{v},\ket{v^\perp}\}$ eliminando l'incertezza su $\ket{v}$ ma rimarrebbe l'incertezza su $\ket{w}$. Possiamo fare di meglio utilizzando l'informazione dell'equiprobabilità dei due stati.
+    \\Tracciamo la bisettrice tra $\ket{v}$ e $\ket{w}$ e definiamo come base di misura quella relativa agli stati distanti 45° da entrambi. Facendo così otteniamo come output lo stato più vicino al nostro stato attuale.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\linewidth]{images/novector2.png}
+        \label{fig:placeholder}
+    \end{figure}
+    \textit{N.B. Questa misura non ci da una certezza del cento percento ma minimizza l'errore}. 
 
+
+    
+    \subsection{Stati Quantistici a Molti Qubit}
+    Uno stato generico di due qubit è esprimibile come:
+    \[
+    \ket{\psi} = \alpha\ket{00} + \beta\ket{01} + \gamma \ket{10} + \delta \ket{11}    
+    \]
+    Dove le probabilità relative alla misurazione dei rispettivi quattro stati sono date dalla regola di Born:
+    \begin{align}
+    P(\ket{00}) = |\alpha| ^2 && P(\ket{01}) = |\beta| ^2
+    && P(\ket{10}) = |\gamma| ^2 && P(\ket{11}) = |\delta| ^2
+    \end{align}
+    In linea di principio non ci sono limiti di distanza tra quibit in entanglement. In questo caso ci basta misurare il primo qubit. In enerale invece la probabilità di misurare $\ket{0}$ è $|\alpha|^2+|\beta|^2$ e di conseguenza la probabilità di misurare $\ket{1}$ è $|\gamma|^2+|\delta|^2$.
+    \\Supponiamo di aver misurato il primo qubit ottenendo $\ket{0}$, cosa posso dire del secondo? Adesso gli stati possibili sono solo $\ket{00}$ e $\ket{01}$. Lo stato è ora in sovrapposizione
+    \begin{equation}
+        \ket{0} \otimes \frac{\alpha\ket{0}+ \beta\ket{1}}{\sqrt{|\alpha|^2+|\beta|^2}}
+    \end{equation}
+    dove il denominatore garantisce la normalizzazione. Chiamiamo questa la \textbf{Regola della Misura Parziale}.
+
+    \subsubsection{Operazioni su più Qubit}
+    Uno degli operatori più comuni su due qubit è il CNOT, visto precedentemente in alcuni esempi e presente nella tabella \ref{fig:TabGate}. Il suo effetto è flippare il valore del secondo bit se il valore del primo è 1.
+    \\Se invece volessimo scrivere un operatore che applica il not al secondo e sul primo non fa niente? La matrice corrispondente è
+    \[
+    \begin{bmatrix}
+        0 & 1 & 0 & 0
+        \\ 1 & 0 & 0 & 0
+        \\ 0 & 0 & 0 & 1
+        \\ 0 & 0 & 1 & 0
+    \end{bmatrix}
+    \]
+    che possamo scrivere tramite prodotto tensoriale
+    \[
+     I \otimes \text{NOT} = \begin{bmatrix}
+        1 & 0 \\ 0 & 1
+     \end{bmatrix}
+     \otimes \begin{bmatrix}
+         0 & 1 \\ 1 & 0
+     \end{bmatrix}
+    \]
+    Analogamente se volessimo applicare il not sul primo e non fare nulla sul secondo ovviamente basta fare l'inverso $\text{NOT} \otimes I $.
+    \medskip
+    \\ \textit{N.B. Le righe della matrice rappresentano le ampiezze degli input, le colonne degli output. Nella matrice di prima l'ampiezza dell'input $\ket{00}$ corrisponde a quella dell'output $\ket{01}$}.
+    \medskip
+    \\
+    Spesso in meccanica quantistica ci ritroviamo a concatenare operatori su qubit diversi. Nel caso in cui volessimo applicarne solo uno ad uno dei qubit del sistema lo concateneremo con l'identità e lo inseriremo nella posizione desiderata.
+    \[
+    I \otimes I \otimes \dots \otimes U \otimes \dots \otimes I
+    \]
+    Se invece volessimo applicare 2 Hadamard?
+    \[
+    \frac{1}{2}
+    \begin{bmatrix}
+        1 & 1 & 1 & 1
+        \\ 1 & -1 & 1 & -1
+        \\ 1 & 1 &- 1 & -1
+        \\ 1 & -1 & -1 & 1
+    \end{bmatrix}
+    \]
+    Analizzando la matrice osserviamo che nella prima riga avviene $ H \otimes H \ket{00} = \ket{++}$, nella seconda $ H \otimes H \ket{01} = \ket{+-}$ e così via.
+    \\Notiamo che tutte le operazioni su più qubit che abbiamo visto fin'ora sono state costruite tramite prodotti tensoriali, tranne il CNOT. Questo aspetto è particolarmente importante perchè è l'unica operazione che abbiamo visto in cui un qubit ne influenza un altro.
+
+    \subsubsection{Entanglement}
+    Analizziamo il comportamento del seguente circuito e proviamo a calcolarne il risultato.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\linewidth]{images/entcirq.png}
+        \caption{Caption}
+        \label{fig:placeholder}
+    \end{figure}
+    Esprimendo i vari stati in braket notation otteniamo i seguenti passaggi 
+    \[
+    \ket{00}\longrightarrow \ket{+}\otimes\ket{0} = \frac{1}{\sqrt{2}}(\ket{00}+ \ket{10}) \longrightarrow \frac{1}{\sqrt{2}} (\ket{00} + \ket{11})
+    \]
+    Lo stato appena ottenuto è detto \textbf{Singoletto} o \textbf{Stato di Bell} o ancora \textbf{Stato EPR}. Questo tipo di stati è interessante poichè la misura sul primo qubit, a differenza di quanto visto in precedenza, implica il collasso anche del secondo. Questi stati non sono fattorizzabili nel prodotto tensoriale di due qubit, per questo è detto \textit{\textbf{entangled}}, cioè intrinsecamente legato (non decomponibile, appunto).
+    Gli stati non entangled sono detti separabili o stati prodotto. 
+    \\ Gli stati entangled sono forzati ad esistere per le regole viste in precedenza, ciò storicamente è emerso molto presto e ci si è accorti che moltissimi stati sono effettivamente stati entangled. Questo risultato fu messo in discussione da Einstein che lo definiva una \textit{"Inquietante azione a distanza"}, poichè nonostante l'entanglement richieda tipicamente la vicinanza tra le particele per iniziare, se successivamente le particelle vengono separate esso permane (Questo è stato dimostato anche sperimentalmente).
+    \medskip
+    \\
+    Immaginiamo adesso che una coppia in entanglement venga condivisa tra Alice e Bob, in particolare quella dello stato visto in precedenza. Se Alice portasse la propria particella e la misurasse ottenendo $\ket{0}$, allora saprebbe \textit{istantaneamente} che anche Bob quando misurerà la propria otterrà lo stesso risultato.
+
+
+    
+    
     
 \end{document}
