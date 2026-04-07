@@ -614,6 +614,43 @@ Esiste l'opinione secondo cui, se sapessimo tutto sull'universo, come ad esempio
     \medskip
     \\
     Immaginiamo adesso che una coppia in entanglement venga condivisa tra Alice e Bob, in particolare quella dello stato visto in precedenza. Se Alice portasse la propria particella e la misurasse ottenendo $\ket{0}$, allora saprebbe \textit{istantaneamente} che anche Bob quando misurerà la propria otterrà lo stesso risultato.
+    \\Questo disturbava moltissimo Einstein, mentre per altri scienziati non era poi chissà che risultato. In fin dei conti, Alice non ha controllo sulla misurazione ma ottiene semplicemente $\ket{0}$ e $\ket{1}$ con uguale probabilità. In questo caso l'inquietante azione a distanza potrebbe essere spiegata semplicemente come una correlazione tra due variabili casuali, potendo essere spiegata classicamente.
+    \\ Comunque, in un famoso paper del 35' Einstein, Podolsky e Rosen illustrarono un ulteriore problema: Alice potrebbe fare anche altro piuttosto che misurare nella base canonica.
+    \medskip
+    \\Se ad esempio provasse a misurare in base $\{\ket{+},\ket{-}\}$? Come intuibile otterrebbe $\ket{+}/\ket{-}$ con uguale probabilità. 
+    \\Innanzitutto Alice modifica lo stato usando Hadamard e poi misura in base canonica.
+    \\L'applicazione di Hadamard sul bit di alice causa la seguente trasformazione:
+    \[
+    (H \otimes I)\left(\frac{\ket{00}+ \ket{11}}{\sqrt{2}}\right) = \frac{1}{2} (\ket{00}+ \ket{01} + \ket{10} -\ket{11})
+    \]
+    Adesso misurando la propria particella, Alice sa che se ottiene $\ket{0}$ lo stato di Bob collassa nello stato:
+    \[
+    \frac{1}{\sqrt{2}}(\ket{0}+\ket{1}) = \ket{+}
+    \]
+    mentre se misura $\ket{1}$:
+    \[
+    \frac{1}{\sqrt{2}} (\ket{0}- \ket{1})= \ket{-}
+    \]
+
+    Secondo i tre scienziati questo è ancora più problematico, poichè misurando in abse canonica il risultato di Alice fa collassare anche quello di Bob, ma anche se lei misura in base $\{\ket{+},\ket{-}\}$ lo stato di Bob collassa, questa volta in $\ket{+}/\ket{-}$. Questa sembra essere una trasmissione di informazioni superluminale.
+    \medskip
+    \\ Fermiamoci un attimo per capire meglio. Cosa succederebbe se fosse Bob a Misurare?
+    \begin{itemize}
+        \item Se Alice ha misurato in base canonica, Bob avrà le stesse probabilità di misurare $\ket{0}$ o $\ket{1}$ usando la stessa misurazione
+        \item Se Alice ha usato la base di Hadamard per misurare, alloca Bob avrà sempre una situazione equiprobabile di misurare $\ket{0}$ o $\ket{1}$ in base canonica
+    \end{itemize}
+    In pratica la situazione per Bob non è cambiata nonostante le scelte di Alice. Sembrerebbe proprio che ci sia una situazione più generale da dover analizzare per rendere questa situazione compatibile con il limite della velocità della luce. Questo sarà affrontato in maniera più approfondita in seguito.
+
+
+
+
+
+
+    \section{Stati misti}
+
+
+
+
 
 
     
